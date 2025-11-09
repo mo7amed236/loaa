@@ -387,7 +387,7 @@
                         stream.getTracks().forEach(track => track.stop());
                     }
                     
-                    stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' }, audio: false });
+                    stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: false });
                     videoElement.srcObject = stream;
                 } catch (err) {
                     console.error("خطأ في الوصول للكاميرا:", err);
